@@ -5,7 +5,7 @@
 
   Keep in mind that your functions must still have and use a parameter for accepting all tickets.
 */
-const exampleTicketData = require("../data/tickets");
+const exampleTicketData = require('../data/tickets').default;
 // Do not change the line above.
 
 /**
@@ -35,7 +35,7 @@ const exampleTicketData = require("../data/tickets");
     };
     calculateTicketPrice(tickets, ticketInfo);
     //> 3000
- *  
+ *
  * EXAMPLE:
  *  const ticketInfo = {
       ticketType: "membership",
@@ -54,7 +54,9 @@ const exampleTicketData = require("../data/tickets");
     calculateTicketPrice(tickets, ticketInfo);
     //> "Entrant type 'kid' cannot be found."
  */
-function calculateTicketPrice(ticketData, ticketInfo) {}
+function calculateTicketPrice ( ticketData, ticketInfo )
+{
+  
 
 /**
  * purchaseTickets()
@@ -62,7 +64,7 @@ function calculateTicketPrice(ticketData, ticketInfo) {}
  * Returns a receipt based off of a number of purchase. Each "purchase" maintains the shape from `ticketInfo` in the previous function.
  *
  * Any errors that would occur as a result of incorrect ticket information should be surfaced in the same way it is in the previous function.
- * 
+ *
  * NOTE: Pay close attention to the format in the examples below and tests. You will need to have the same format to get the tests to pass.
  *
  * @param {Object} ticketData - An object containing data about prices to enter the museum. See the `data/tickets.js` file for an example of the input.
@@ -114,5 +116,5 @@ function purchaseTickets(ticketData, purchases) {}
 // Do not change anything below this line.
 module.exports = {
   calculateTicketPrice,
-  purchaseTickets,
+  purchaseTickets
 };

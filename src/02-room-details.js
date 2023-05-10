@@ -4,7 +4,7 @@
   You may use this data to test your functions. You may assume the shape of the data remains the same but that the values may change.
 */
 const exampleDinosaurData = require("../data/dinosaurs");
-const exampleRoomData = require("../data/rooms");
+const exampleRoomData = require( "../data/rooms" ).default;
 // Do not change the lines above.
 
 /**
@@ -29,18 +29,18 @@ function getRoomByDinosaurName(dinosaurs, rooms, dinosaurName) {
   let roomName = "Dinosaur with name " + dinosaurs.name + " cannot be found.";
   for (const room of rooms) {
     for ( const dinosaur of dinosaurs ) {console.log(dinosaur) }
-//       if (room.dinosaurs !== dinosaurs.dinosaurId) {n
-//         roomName =
-//           "Dinosaur with name " +
-//           dinosaurs.name +
-//           " cannot be found in any rooms.";
-//       } else if (room.dinosaurs === dinosaurName) {
-//         roomName = room.name;
-//       }
-//     }
-//   }
-//   return roomName;
-// }
+      if (room.dinosaurs !== dinosaurs.dinosaurId) {n
+        roomName =
+          "Dinosaur with name " +
+          dinosaurs.name +
+          " cannot be found in any rooms.";
+      } else if (room.dinosaurs === dinosaurName) {
+        roomName = room.name;
+      }
+    }
+  return roomName;
+  }
+
 
 /**
  * getConnectedRoomNamesById()
@@ -64,7 +64,9 @@ function getRoomByDinosaurName(dinosaurs, rooms, dinosaurName) {
       "Kit Hopkins Education Wing"
     ]
  */
-function getConnectedRoomNamesById(rooms, id) {}
+function getConnectedRoomNamesById ( rooms, id )
+{
+  rooms
 
 module.exports = {
   getRoomByDinosaurName,

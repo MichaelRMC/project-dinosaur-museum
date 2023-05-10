@@ -17,5 +17,8 @@
     "jest": "^27.0.6",
     "prettier": "^2.8.8",
     "prettier-eslint": "^15.0.1"
+  },
+  "dependencies": {
+    "ci": "^2.2.0"
   }
 }

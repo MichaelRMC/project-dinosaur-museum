@@ -5,7 +5,7 @@
 
   Keep in mind that your functions must still have and use a parameter for accepting all dinosaurs.
 */
-const exampleDinosaurData = require("../data/dinosaurs");
+import exampleDinosaurData from "../data/dinosaurs";
 // Do not change the line above.
 
 /**
@@ -23,22 +23,24 @@ const exampleDinosaurData = require("../data/dinosaurs");
  *  //> { Brachiosaurus: 98.43 }
  */
 function getLongestDinosaur ( dinosaurs )
-{ 
-  function heightInFeet(dinosaurs ) {
+{
+  function heightInFeet9() {
     return dinosaurs.lengthInMeters * 3.281;
   }
-   
-  let maxDinosaurHeight = Math.max( heightInFeet );
-  
-  let longestDinosaur; {
-    if (maxDinosaurHeight === dinosaurs.heightInFeet) {
-      longestDinosaur = dinosaurs.name
+
+    let maxDinosaurHeight = Math.max( heightInFeet );
+    function heightInFeet ( dinosaurs )
+    {
+
+      let longestDinosaur;
+      if ( maxDinosaurHeight === dinosaurs.heightInFeet )
+      {
+        longestDinosaur = dinosaurs.name;
+      }
+      return { longestDinosaur: maxDinosaurHeight };
+
     }
-  
   }
-  
-  return {longestDinosaur : maxDinosaurHeight};
-}
 /**
  * getDinosaurDescription()
  * ---------------------
@@ -86,10 +88,15 @@ function getDinosaurDescription(dinosaurs, id) {}
  *  getDinosaursAliveMya(dinosaurs, 65, "unknown-key");
  *  //> ["WHQcpcOj0G"]
  */
-function getDinosaursAliveMya(dinosaurs, mya, key) {}
+function getDinosaursAliveMya ( dinosaurs, mya, key )
+{
+  dinosaurs.map( dinosaurs =>
+  {
 
-module.exports = {
+}
+
+export default {
   getLongestDinosaur,
   getDinosaurDescription,
   getDinosaursAliveMya,
-};
+}
