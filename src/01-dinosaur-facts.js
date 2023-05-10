@@ -93,9 +93,9 @@ function getDinosaursAliveMya ( dinosaurs, mya, key )
   dinosaurs.map( dinosaurs =>
   {
 
+  }
 }
-
-export default {
+exports = {
   getLongestDinosaur,
   getDinosaurDescription,
   getDinosaursAliveMya,

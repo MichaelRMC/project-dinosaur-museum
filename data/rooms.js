@@ -172,4 +172,4 @@ const rooms = [
   }
 ];
 
-export { rooms };
+exports = { rooms };
