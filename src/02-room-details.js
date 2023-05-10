@@ -68,7 +68,7 @@ function getConnectedRoomNamesById ( rooms, id )
 {
   rooms
 
-module.exports = {
-  getRoomByDinosaurName,
-  getConnectedRoomNamesById,
+  exports = {
+    getRoomByDinosaurName,
+    getConnectedRoomNamesById,
 };
