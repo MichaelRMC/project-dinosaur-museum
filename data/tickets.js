@@ -43,4 +43,4 @@ const tickets = {
   }
 };
 
-exports = { tickets };
+module.exports =  tickets ;
