@@ -28,7 +28,7 @@ function getLongestDinosaur(dinosaurs) {
   }
 
   let maxDinosaurHeight = Math.max( heightInFeet );
-  let longestDinosaur = undefined;
+  let longestDinosaur;
 
    if (maxDinosaurHeight === dinosaurs.heightInFeet) {
       longestDinosaur = dinosaurs.name;
@@ -98,7 +98,14 @@ function getDinosaursAliveMya ( dinosaurs, mya, key )
   let dinoAlive = []
   for (const dinosaur of dinosaurs) {
     for (const millionYA of dinosaur.mya) {
-     
+     if (millionYA === mya) {
+      if (key) {
+        dinoAlive.push(`${value}`)
+      } else
+      {
+        dinoAlive.push(dinosaur.dinosaurId)
+      }
+     }
     }
   }
   console.log( dinoAlive )
