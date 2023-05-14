@@ -4,7 +4,7 @@ const {
 } = require('../src/03-ticket-calculator');
 
 // Ticket data
-const tickets = require('../data/tickets').default;
+const tickets = require('../data/tickets');
 
 describe('calculateTicketPrice()', () => {
   describe('errors', () => {

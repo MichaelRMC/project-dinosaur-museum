@@ -43,4 +43,4 @@ const tickets = {
   }
 };
 
-export { tickets };
+exports = { tickets };

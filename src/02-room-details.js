@@ -3,8 +3,8 @@
 
   You may use this data to test your functions. You may assume the shape of the data remains the same but that the values may change.
 */
-const exampleDinosaurData = require("../data/dinosaurs");
-const exampleRoomData = require( "../data/rooms" );
+const exampleDinosaurData = require('../data/dinosaurs');
+const exampleRoomData = require('../data/rooms');
 // Do not change the lines above.
 
 /**
@@ -26,21 +26,19 @@ const exampleRoomData = require( "../data/rooms" );
  *  //> "Dinosaur with name 'Pterodactyl' cannot be found."
  */
 function getRoomByDinosaurName(dinosaurs, rooms, dinosaurName) {
-  let roomInfo = "Dinosaur with name " + dinosaurs.name + " cannot be found.";
+  let roomInfo = `Dinosaur with name '${ dinosaurName }' cannot be found.`;
   for (const room of rooms) {
-    for ( const dinosaur of dinosaurs ) {console.log(dinosaur) }
-  //     if (room.dinosaurs !== dinosaurs.dinosaurId) {n
-  //       roomName =
-  //         "Dinosaur with name " +
-  //         dinosaurs.name +
-  //         " cannot be found in any rooms.";
-  //     } else if (room.dinosaurs === dinosaurName) {
-  //       roomName = room.name;
-  //     }
-  //   }
-  // return roomName;
+    for (const dinosaur of dinosaurs) {
+      if (room.dinosaurs !== dinosaur.dinosaurId) {
+      roomInfo =
+        `Dinosaur with name '${ dinosaurName }' cannot be found in any rooms.`;
+    } else {
+      roomInfo = room.name;
+    }
+    }
   }
-
+  return roomInfo;
+}
 
 /**
  * getConnectedRoomNamesById()
@@ -64,8 +62,18 @@ function getRoomByDinosaurName(dinosaurs, rooms, dinosaurName) {
       "Kit Hopkins Education Wing"
     ]
  */
-function getConnectedRoomNamesById ( rooms, id ) {}
+function getConnectedRoomNamesById ( rooms, id )
+{ 
+  let connectedRoomInfo = `Room with ID of '${ id }' could not be found.`
+  for (const room of rooms) {
+    console.log(room)
+  }
+  return connectedRoomInfo
+  }
+  
 
-  exports = {
-    getRoomByDinosaurName,
-    getConnectedRoomNamesById}
+
+module.exports = {
+  getRoomByDinosaurName,
+  getConnectedRoomNamesById
+};

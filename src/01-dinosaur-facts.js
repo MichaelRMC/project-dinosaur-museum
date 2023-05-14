@@ -5,7 +5,7 @@
 
   Keep in mind that your functions must still have and use a parameter for accepting all dinosaurs.
 */
-import exampleDinosaurData from "../data/dinosaurs";
+const exampleDinosaurData = require('../data/dinosaurs');
 // Do not change the line above.
 
 /**
@@ -22,25 +22,19 @@ import exampleDinosaurData from "../data/dinosaurs";
  *  getLongestDinosaur(dinosaurs);
  *  //> { Brachiosaurus: 98.43 }
  */
-function getLongestDinosaur ( dinosaurs )
-{
-  function heightInFeet9() {
+function getLongestDinosaur(dinosaurs) {
+  function heightInFeet(dinosaurs) {
     return dinosaurs.lengthInMeters * 3.281;
   }
 
-    let maxDinosaurHeight = Math.max( heightInFeet );
-    function heightInFeet ( dinosaurs )
-    {
+  let maxDinosaurHeight = Math.max( heightInFeet );
+  let longestDinosaur = undefined;
 
-      let longestDinosaur;
-      if ( maxDinosaurHeight === dinosaurs.heightInFeet )
-      {
-        longestDinosaur = dinosaurs.name;
-      }
-      return { longestDinosaur: maxDinosaurHeight };
-
+   if (maxDinosaurHeight === dinosaurs.heightInFeet) {
+      longestDinosaur = dinosaurs.name;
     }
-  }
+  return { longestDinosaur: maxDinosaurHeight };
+}
 /**
  * getDinosaurDescription()
  * ---------------------
@@ -61,8 +55,16 @@ function getLongestDinosaur ( dinosaurs )
  *  getDinosaurDescription(dinosaurs, "incorrect-id");
  *  //> "A dinosaur with an ID of 'incorrect-id' cannot be found."
  */
-function getDinosaurDescription(dinosaurs, id) {}
+function getDinosaurDescription(dinosaurs, id) {
+  let dinosaurInfo = `A dinosaur with an ID of '${id}' cannot be found.`;
 
+  for (const dinosaur of dinosaurs) {
+    if (dinosaur.dinosaurId === id)   {
+      dinosaurInfo = `${dinosaur.name} ${dinosaur.dinosaurId}\n${dinosaur.info}`;
+    }
+  }
+  return dinosaurInfo;
+}
 /**
  * getDinosaursAliveMya()
  * ---------------------
@@ -90,13 +92,10 @@ function getDinosaurDescription(dinosaurs, id) {}
  */
 function getDinosaursAliveMya ( dinosaurs, mya, key )
 {
-  dinosaurs.map( dinosaurs =>
-  {
-
-  }
+  
 }
 exports = {
   getLongestDinosaur,
   getDinosaurDescription,
-  getDinosaursAliveMya,
-}
+  getDinosaursAliveMya
+};

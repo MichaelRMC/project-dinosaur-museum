@@ -56,8 +56,8 @@ const exampleTicketData = require('../data/tickets').default;
  */
 function calculateTicketPrice ( ticketData, ticketInfo )
 {
-  
 
+}
 /**
  * purchaseTickets()
  * ---------------------

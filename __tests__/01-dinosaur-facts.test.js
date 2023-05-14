@@ -1,6 +1,8 @@
-const { getLongestDinosaur, getDinosaurDescription, getDinosaursAliveMya } =
-  require('../src/01-dinosaur-facts').default;
-
+const {
+  getLongestDinosaur,
+  getDinosaurDescription,
+  getDinosaursAliveMya
+} = require('../src/01-dinosaur-facts.js')
 // Dinosaur data
 const dinosaurs = require('../data/dinosaurs');
 
