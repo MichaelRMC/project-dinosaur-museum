@@ -1,3 +1,5 @@
+const { general, membership } = require('../data/tickets');
+
 /*
   Do not change the line below. If you'd like to run code from this file, you may use the `exampleTicketData` variable below to gain access to tickets data. This data is pulled from the `data/tickets.js` file.
 
@@ -54,9 +56,62 @@ const exampleTicketData = require('../data/tickets').default;
     calculateTicketPrice(tickets, ticketInfo);
     //> "Entrant type 'kid' cannot be found."
  */
-function calculateTicketPrice ( ticketData, ticketInfo )
-{
-
+function calculateTicketPrice(ticketData, ticketInfo) {
+  let totalCost = 0;
+  for (const ticketinfo of ticketData) {
+    switch ((ticketData, ticketInfo)) {
+      case general:
+      case priceInCents.child:
+        totalCost += 2000;
+        break;
+      case general:
+      case priceInCents.adult:
+        totalCost += 3000;
+        break;
+      case general:
+      case priceInCents.senior:
+        totalCost += 2500;
+        break;
+      case membership:
+      case priceInCents.child:
+        totalCost += 1500;
+        break;
+      case membership:
+      case priceInCents.adult:
+        totalCost += 2800;
+        break;
+      case membership:
+      case priceInCents.senior:
+        totalCost += 2300;
+      case extras.movie:
+      case priceInCents.child:
+      case priceInCents.adult:
+      case priceInCents.senior:
+        totalCost += 1000;
+        break;
+      case extras.education:
+      case priceInCents.child:
+        totalCost += 1000;
+        break;
+      case extras.education:
+      case priceInCents.adult:
+      case priceInCents.senior:
+        totalCost += 1200;
+        break;
+      case extras.terrace:
+      case priceInCents.child:
+        totalCost += 500;
+        break;
+      case extras.terrace:
+      case priceInCents.adult:
+      case priceInCents.senior:
+        totalCost += 1000;
+      default:
+        totalCost = 'Invalid Ticket Information';
+        break;
+    }
+  }
+  return totalCost;
 }
 /**
  * purchaseTickets()
