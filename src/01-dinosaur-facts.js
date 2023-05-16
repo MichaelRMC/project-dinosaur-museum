@@ -99,8 +99,8 @@ function getDinosaursAliveMya ( dinosaurs, mya, key )
   for (const dinosaur of dinosaurs) {
     for (const millionYA of dinosaur.mya) {
      if (millionYA === mya) {
-      if (key) {
-        dinoAlive.push(`${value}`)
+      if (key === key) {
+        dinoAlive.push(value)
       } else
       {
         dinoAlive.push(dinosaur.dinosaurId)
@@ -108,7 +108,7 @@ function getDinosaursAliveMya ( dinosaurs, mya, key )
      }
     }
   }
-  console.log( dinoAlive )
+  
 
 }
 module.exports = {

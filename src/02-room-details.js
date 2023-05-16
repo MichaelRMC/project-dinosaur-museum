@@ -65,8 +65,7 @@ function getConnectedRoomNamesById(rooms, id) {
   let connectedRoomNames = [];
   let connectedRoomInfo = `Room with ID of '${id}' could not be found.`;
   for (const room of rooms) {
-    if ( room.roomId === id )
-    {
+    if (room.roomId === id) {
       connectedRoomNames.push(room.name);
       connectedRoomInfo = connectedRoomNames;
     }
